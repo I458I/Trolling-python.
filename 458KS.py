@@ -27,10 +27,10 @@ if yy == "ON":
  urs.start()
  def mouse():
    while True:
-    x = random.randint(0, 2000)
-    y = random.randint(0, 2000)
-    pyautogui.moveTo(x, y)
-    pyautogui.doubleClick(x, y)
+     x = random.randint(0, 2000)
+     y = random.randint(0, 2000)
+     pyautogui.moveTo(x, y)
+     pyautogui.doubleClick(x, y)
  ran = threading.Thread(target=mouse)
  ran.start()
  pyautogui.hotkey('winleft', 'down')
